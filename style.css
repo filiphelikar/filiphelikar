@@ -1,0 +1,218 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+/***** Header *****/
+header {
+    top:0;
+    position: fixed;   
+    z-index: 1;
+    width: 100%;
+    height: 68px;
+    background-color: white;
+}
+#logo {
+    display: inline-block;
+    margin-left:calc(50% - 550px);
+    margin-top: 8px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: black;
+}
+#logo p{
+    letter-spacing: -0.5px;
+    height: 100%;
+    line-height: 52px;
+    text-align: center;
+    color: white;
+}
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 600px;
+    text-align: center;
+    left: calc(50% - 550px);
+    
+}
+nav {
+    display: inline-block;
+    width: 600px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 100px; 
+}
+
+nav ul li:last-child {
+    margin-right: 0; 
+}
+
+nav ul li a {
+    color: #222222;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: #505050;
+    text-decoration: none;
+}
+#main-photo {
+    margin-top: 62px;
+    padding: 0;
+    width: 100%; 
+    overflow: hidden;
+    margin: auto;
+    display: block;
+    height: 300px;
+    object-fit: cover;
+}
+h1 {
+    font-size: 64px;
+    margin: 0;
+    margin-top: 3.5px;
+    text-align: center;
+    color: #EBEBEB;
+    
+}
+
+/***** Main content *****/
+
+main {
+    margin: 0 auto;
+    margin-top: 15px;
+    height: 100%;
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+}
+
+main img, main div {
+    width: 100%;
+    grid-column: span 4; 
+}
+main div img {
+    margin-top: 10px;
+}
+
+/***** Contact *****/
+#contact {
+    margin: 0 auto;
+    margin-top: 30px;
+    height: 100%;
+    width: 100%;
+    max-width: 1100px;
+    text-align: center;
+}
+h2 {
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.email {
+    margin: 0 auto;
+    display: block;
+    width: 600px;
+    box-sizing: border-box;
+    height: 40px;
+    border-radius: 4px;
+    background: rgb(220, 220, 220);
+    border: none;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+.text {
+    margin: 0 auto;
+    display: block;
+    width: 700px;
+    box-sizing: border-box;
+    height: 150px;
+    border-radius: 4px;
+    background: rgb(220, 220, 220);
+    border: none;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+.submit {
+    border: 2px solid rgb(60, 60, 60);
+    display: block;
+    width: fit-content;
+    margin:0 auto;
+    padding: 10px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+.submit:hover, .submit:active{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(60, 60, 60);
+}
+#contact a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    margin-top: 30px;
+}
+
+/***** Footer *****/
+
+footer{
+    background-color: #ffffff; 
+    color: #000000;  
+    height: 100px;
+    width: 100%; 
+    position: relative; 
+    bottom: 0; 
+    margin-top: 60px;
+    box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.24);
+}
+footer p{
+    text-align: center;
+    padding-top: 50px;
+}
+
+/***** Media queries pro responzivní design *****/
+
+@media only screen and (max-width: 780px) {
+
+main {
+    width: 96%;
+    grid-template-columns: 1fr;
+}    
+nav ul { 
+    /* display: none; */
+    display: block;
+    width: 100%;
+}
+#main-photo {
+    width: 280%;
+    position: relative;
+    left: -70%;
+}
+span {
+    display: block;
+    width: 100%;
+
+    overflow: hidden;
+}
+nav { width: 96%;
+    position: relative;
+    top: -35px;
+display: block;}
+}
+.text, .email { width: 96%;}
+
+
+  

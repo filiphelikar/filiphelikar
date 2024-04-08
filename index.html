@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<title>Photo by Filip</title>
+</head>
+<body>
+    <header> 
+        <div id="logo">
+        <p>F H</p>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#main-photo">Home</a></li>
+            <li><a href="#main">Galery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+    <span>
+        <img src="Hlavní_Foto.JPG" alt="hlavní foto mého kocoura: zblízka, slunečný, den" id="main-photo">
+    </span>
+    <main id="main">
+        <div><img src="fotky/IMG_1-min.JPG" alt="Foto">
+            <img src="fotky/IMG_5-min.JPG" alt="Foto">
+            <img src="fotky/IMG_4-min.JPG" alt="Foto">
+            <img src="fotky/IMG_10.PNG" alt="Foto">
+        </div>
+        <div>
+            <img src="fotky/IMG_2-min.JPG" alt="Foto">
+            <img src="fotky/IMG_9-min.JPG" alt="Foto">
+             <img src="fotky/IMG_3-min.JPG" alt="Foto">
+             <img src="fotky/IMG_11.PNG" alt="Foto">
+        </div>
+        <div>
+             <img src="fotky/IMG_7-min.JPG" alt="Foto">
+             <img src="fotky/IMG_6-min.JPG" alt="Foto">
+             <img src="fotky/IMG_8-min.JPG" alt="Foto">
+              <img src="fotky/IMG_12.PNG" alt="Foto">
+        </div>
+    </main>
+    <div id="contact">
+        <h2>Contact</h2>
+        <form action="">
+            <input type="email" class="email" placeholder="email"><br>
+            <textarea name="" id="" class="text" placeholder="Napiš mi"></textarea><br>
+            <input type="submit" value="Odeslat" class="submit">
+        </form>
+        <a href="https://www.instagram.com/filiphelikar/" target="_blank">
+            <img src="instagram.png" alt="Instagram">
+            <p>instagram</p>
+        </a>
+    </div>
+    <footer>
+        <p>&copy; 2024 Photo by Filip</p>
+    </footer>
+    <script>
+        // Přidání plynulého posunu pro odkazy na stránce s ID cílového prvku
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                // Získej cílový element na základě atributu href
+                const targetId = this.getAttribute('href');
+    
+                // Zkontroluj, zda je cílový element přítomen na stránce
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Zabraň výchozí akci kliknutí na odkaz
+                    e.preventDefault();
+                    
+                    // Plynulé posunutí na cílový element
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+    
+</body>
