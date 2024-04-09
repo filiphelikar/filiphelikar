@@ -9,7 +9,7 @@
 
 <body>
     <div class="full-img" id="fullImgBox">
-        <img src="fotky/IMG_5-min.JPG" id="fullImg">
+        <img src="" id="fullImg">
         <span onclick="closeFullImg()">X</span>
     </div>
     <header> 
@@ -89,7 +89,7 @@
         var fullImg = document.getElementById("fullImg");
 
         function openFullImg(pic){
-            if(window.innerWidth > 768){
+            if(window.innerWidth > 780){
                 fullImgBox.style.display = "block";
                 fullImg.src = pic;
             }
