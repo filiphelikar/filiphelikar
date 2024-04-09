@@ -6,7 +6,12 @@
 <link rel="stylesheet" href="style.css">
 <title>Photo by Filip</title>
 </head>
+
 <body>
+    <div class="full-img" id="fullImgBox">
+        <img src="fotky/IMG_5-min.JPG" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+    </div>
     <header> 
         <div id="logo">
         <p>F H</p>
@@ -23,26 +28,24 @@
         <img src="Hlavní_Foto.JPG" alt="hlavní foto mého kocoura: zblízka, slunečný, den" id="main-photo">
     </span>
     <main id="main">
-        <div><img src="fotky/IMG_1-min.JPG" alt="Foto">
-            <img src="fotky/IMG_5-min.JPG" alt="Foto">
-            <img src="fotky/IMG_4-min.JPG" alt="Foto">
-            <img src="fotky/IMG_10.png" alt="Foto">
+        <div><img src="fotky/IMG_1-min.JPG" alt="Foto" onclick="openFullImg(this.src)">
+            <img src="fotky/IMG_5-min.JPG" alt="Foto" onclick="openFullImg(this.src)">
+            <img src="fotky/IMG_4-min.JPG" alt="Foto" onclick="openFullImg(this.src)">
+            <img src="fotky/IMG_10.png" alt="Foto" onclick="openFullImg(this.src)">
         </div>
         <div>
-            <img src="fotky/IMG_2-min.JPG" alt="Foto">
-            <img src="fotky/IMG_9-min.JPG" alt="Foto">
-             <img src="fotky/IMG_3-min.JPG" alt="Foto">
-             <img src="fotky/IMG_11.png" alt="Foto">
+            <img src="fotky/IMG_2-min.JPG" alt="Foto" onclick="openFullImg(this.src)">
+            <img src="fotky/IMG_9-min.JPG" alt="Foto" onclick="openFullImg(this.src)">
+             <img src="fotky/IMG_3-min.JPG" alt="Foto" onclick="openFullImg(this.src)">
+             <img src="fotky/IMG_11.png" alt="Foto" onclick="openFullImg(this.src)">
         </div>
         <div>
-             <img src="fotky/IMG_7-min.JPG" alt="Foto">
-             <img src="fotky/IMG_6-min.JPG" alt="Foto">
-             <img src="fotky/IMG_8-min.JPG" alt="Foto">
-              <img src="fotky/IMG_12.png" alt="Foto">
+             <img src="fotky/IMG_7-min.JPG" alt="Foto" onclick="openFullImg(this.src)">
+             <img src="fotky/IMG_6-min.JPG" alt="Foto" onclick="openFullImg(this.src)">
+             <img src="fotky/IMG_8-min.JPG" alt="Foto" onclick="openFullImg(this.src)">
+              <img src="fotky/IMG_12.png" alt="Foto" onclick="openFullImg(this.src)">
         </div>
     </main>
-
-    Jsem začínající frontend programátor a zaujala mě Vaše nabídka.  V příloze posílám svůj životopis, a odkaz na svou první malou stránku.
     <div id="contact">
         <h2>Contact</h2>
         <form action="https://api.web3forms.com/submit"  method="POST">
@@ -63,25 +66,38 @@
         <p>&copy; 2024 Photo by Filip</p>
     </footer>
     <script>
-        // Přidání plynulého posunu pro odkazy na stránce s ID cílového prvku
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                // Získej cílový element na základě atributu href
+
                 const targetId = this.getAttribute('href');
     
-                // Zkontroluj, zda je cílový element přítomen na stránce
+                
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    // Zabraň výchozí akci kliknutí na odkaz
+                    
                     e.preventDefault();
                     
-                    // Plynulé posunutí na cílový element
+                    
                     targetElement.scrollIntoView({
                         behavior: 'smooth'
                     });
                 }
             });
         });
+
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+
+        function openFullImg(pic){
+            if(window.innerWidth > 768){
+                fullImgBox.style.display = "block";
+                fullImg.src = pic;
+            }
+        }
+
+        function closeFullImg(){
+            fullImgBox.style.display = "none";
+        }
     </script>
     
 </body>
