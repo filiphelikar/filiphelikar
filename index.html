@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
+<link rel="icon" href="favicon.ico">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
@@ -10,7 +11,7 @@
 <body>
     <div class="full-img" id="fullImgBox">
         <img src="" id="fullImg">
-        <span onclick="closeFullImg()">X</span>
+        <span onclick="closeFullImg()">✕</span>
     </div>
     <header> 
         <div id="logo">
@@ -25,34 +26,34 @@
     </nav>
     </header>
     <span>
-        <img src="Hlavní_Foto.JPG" alt="hlavní foto mého kocoura: zblízka, slunečný, den" id="main-photo">
+        <img src="Main-Photo.webp" alt="hlavní foto mého kocoura: zblízka, slunečný, den" id="main-photo">
     </span>
     <main id="main">
-        <div><img src="fotky/IMG_1-min.JPG" alt="Foto" onclick="openFullImg(this.src)">
-            <img src="fotky/IMG_5-min.JPG" alt="Foto" onclick="openFullImg(this.src)">
-            <img src="fotky/IMG_4-min.JPG" alt="Foto" onclick="openFullImg(this.src)">
-            <img src="fotky/IMG_10.png" alt="Foto" onclick="openFullImg(this.src)">
+        <div><img src="fotky/IMG_1-min.webp" alt="Foto" onclick="openFullImg(this.src)">
+            <img src="fotky/IMG_5-min.webp" alt="Foto" onclick="openFullImg(this.src)">
+            <img src="fotky/IMG_4-min.webp" alt="Foto" onclick="openFullImg(this.src)">
+            <img src="fotky/IMG_10.webp" alt="Foto" onclick="openFullImg(this.src)">
         </div>
         <div>
-            <img src="fotky/IMG_2-min.JPG" alt="Foto" onclick="openFullImg(this.src)">
-            <img src="fotky/IMG_9-min.JPG" alt="Foto" onclick="openFullImg(this.src)">
-             <img src="fotky/IMG_3-min.JPG" alt="Foto" onclick="openFullImg(this.src)">
-             <img src="fotky/IMG_11.png" alt="Foto" onclick="openFullImg(this.src)">
+            <img src="fotky/IMG_2-min.webp" alt="Foto" onclick="openFullImg(this.src)">
+            <img src="fotky/IMG_9-min.webp" alt="Foto" onclick="openFullImg(this.src)">
+             <img src="fotky/IMG_3-min.webp" alt="Foto" onclick="openFullImg(this.src)">
+             <img src="fotky/IMG_11.webp" alt="Foto" onclick="openFullImg(this.src)">
         </div>
         <div>
-             <img src="fotky/IMG_7-min.JPG" alt="Foto" onclick="openFullImg(this.src)">
-             <img src="fotky/IMG_6-min.JPG" alt="Foto" onclick="openFullImg(this.src)">
-             <img src="fotky/IMG_8-min.JPG" alt="Foto" onclick="openFullImg(this.src)">
-              <img src="fotky/IMG_12.png" alt="Foto" onclick="openFullImg(this.src)">
+             <img src="fotky/IMG_7-min.webp" alt="Foto" onclick="openFullImg(this.src)">
+             <img src="fotky/IMG_6-min.webp" alt="Foto" onclick="openFullImg(this.src)">
+             <img src="fotky/IMG_8-min.webp" alt="Foto" onclick="openFullImg(this.src)">
+              <img src="fotky/IMG_12.webp" alt="Foto" onclick="openFullImg(this.src)">
         </div>
     </main>
     <div id="contact">
         <h2>Contact</h2>
         <form action="https://api.web3forms.com/submit"  method="POST">
             <input type="hidden" name="access_key" value="8d74fdac-e692-4bfc-b99d-0f6515cc8870">
-            <input name="email" type="email" class="email" placeholder="email"><br>
-            <textarea name="popis" id="" class="text" placeholder="Napiš mi"></textarea><br>
-            <input type="submit" value="Odeslat" class="submit">
+            <input name="email" type="email" class="email" placeholder="Email"><br>
+            <textarea name="popis" class="text" placeholder="Message"></textarea><br>
+            <input type="submit" value="Send" class="submit">
         </form>
         <a href="https://www.instagram.com/filiphelikar/" target="_blank">
             <img src="instagram.png" alt="Instagram">

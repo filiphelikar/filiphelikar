@@ -23,7 +23,7 @@ header {
     width: 52px;
     height: 52px;
     border-radius: 50%;
-    background-color: black;
+    background-color: #222222;
 }
 #logo p{
     letter-spacing: -0.5px;
@@ -106,8 +106,7 @@ main div img {
     transition: 0.5s;
 }
 main div img:hover{
-    border-radius: 10px;
-    rotate: 0.3deg;
+    rotate: 0.25deg;
 }
 
 /***** Contact *****/
@@ -148,8 +147,12 @@ h2 {
     border: none;
     padding: 8px;
     margin-bottom: 16px;
+    resize: vertical;
+    min-height: 150px;
+    max-height: 250px;
 }
 .submit {
+    -webkit-appearance: none;
     border: 2px solid rgb(60, 60, 60);
     display: block;
     width: fit-content;
@@ -182,11 +185,11 @@ footer{
     position: relative; 
     bottom: 0; 
     margin-top: 60px;
-    box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.24);
+    box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.13);
 }
 footer p{
     text-align: center; 
-    padding-top: 50px;
+    padding-top: 44px;
 }
 
 .full-img {
